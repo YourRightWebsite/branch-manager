@@ -1,0 +1,9 @@
+.branch-manager-settings {
+    margin-left: 0;
+    margin-right: 20px;
+    margin-top: 20px; 
+
+    @media (max-width: 782px) {
+        margin-left: 20px;  
+    }
+}

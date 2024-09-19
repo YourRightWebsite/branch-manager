@@ -1,0 +1,68 @@
+.branch-manager-dashboard {
+    margin-left: 0;
+    margin-right: 20px;
+    margin-top: 20px; 
+
+    @media (max-width: 782px) {
+        margin-left: 20px;  
+    }
+}
+
+.branch-manager-dashboard .branches-listing {
+    margin-top: 10px;
+}
+
+.branch-manager-dashboard .branches-listing-threecol .row {
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.branch-manager-dashboard .branches-listing-threecol .row .column {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.branch-manager-dashboard .branches-listing-threecol .row.header-row {
+    border-bottom: 2px solid #282828;
+    padding-bottom: 5px;
+}
+
+.branch-manager-dashboard .branches-listing-threecol .row.header-row .column {
+    font-weight: bold;
+} 
+
+.branch-manager-dashboard .branches-listing-threecol .row:not(.header-row) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.branch-manager-dashboard .branches-listing-threecol .row:not(.header-row):nth-child(odd) {
+    background-color: #f6f9fc;
+}
+
+.branch-manager-dashboard .branches-listing-threecol .row.current {
+    background-color: #bdf0bb !important;
+}
+
+.branch-manager-dashboard .new-branch-create {
+    margin-top: 0;
+}
+
+.branch-manager-dashboard .commit-branch-form {
+    textarea {
+        display: block;
+        width: 100%;
+        min-height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+.branch-manager-dashboard .branch-table-changes-status {
+    margin-top: 30px;
+}

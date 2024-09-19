@@ -1,2 +1,2 @@
-# branch-manager
-A WordPress plugin for managing database branches using Dolt
+# BranchManager
+A plugin for WordPress version control using Dolt.

@@ -1,0 +1,89 @@
+.branch-manager-history {
+    margin-left: 0;
+    margin-right: 20px;
+    margin-top: 20px; 
+
+    @media (max-width: 782px) {
+        margin-left: 20px;  
+    }
+}
+
+.branch-manager-history .commit-history-table-inner {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.branch-manager-history .commit-history-table-inner .row {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 0;
+    column-gap: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+}
+
+.branch-manager-history .commit-history-table-inner .row .column {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 1500px) {
+    .branch-manager-history .commit-history-table-inner .row {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    .branch-manager-history .commit-history-table-inner .row .column.non-essential {
+        display: none;
+    }
+}
+
+.branch-manager-history .commit-history-table-inner .row.header-row {
+    font-weight: bold;
+    border-bottom: 2px solid #282828;
+}
+
+.branch-manager-history .commit-history-table-inner .row:not(.header-row):nth-child(odd) {
+    background-color: #f6f9fc;
+}
+
+.branch-manager-history .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.branch-manager-history .pagination .pagination-item {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.branch-manager-history .pagination .pagination-item.forward {
+    text-align: right;
+}
+
+.branch-manager-history .pagination .pagination-item .pagination-link {
+    display: inline-block;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 0;
+    background-color: #0783BE;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: 0;
+    text-decoration: none;
+}
+
+.branch-manager-history .pagination .pagination-item .pagination-link.disabled {
+    background-color: rgba(0,0,0,0.3);
+    cursor: not-allowed;
+}

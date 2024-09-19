@@ -1,0 +1,228 @@
+#wpbody-content .notice {
+    display: none;
+}
+
+#wpcontent {
+    @media (max-width: 782px) {
+        padding-left: 0 !important;
+        margin-left: 0 !important;   
+    }
+}
+
+.branch-manager .bubble {
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.1);
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1400px) {
+    .branch-manager .bubble {
+        margin-bottom: 30px;
+    }
+}
+
+.branch-manager .bubble.message {
+    font-size: 1.125rem;
+    line-height: 1.65rem;
+}
+
+.branch-manager .bubble.message-error {
+    border: 2px solid red;
+}
+
+.branch-manager .bubble.message-success {
+    border: 2px solid green;
+}
+
+.branch-manager .bubble-grid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1400px) {
+    .branch-manager .bubble-grid {
+        display: block;
+        margin-bottom: 0;
+    }
+}
+
+.branch-manager .bubble-grid:last-child {
+    margin-bottom: 0;
+}
+
+.branch-manager .bubble-grid .bubble {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1400px) {
+    .branch-manager .bubble-grid .bubble {
+        margin-bottom: 30px;
+    }
+}
+
+.branch-manager .bubble-grid.two-column {
+    grid-template-columns: 1fr 1fr;
+}
+
+.branch-manager .bubble-grid.three-column {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.branch-manager .bubble-grid.prioritize-right {
+    grid-template-columns:  1fr 2fr;
+}
+
+.branch-manager .branch-manager-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.branch-manager h1.branch-manager-header {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+.branch-manager h2.branch-manager-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.branch-manager p {
+    margin-top: 0;
+    font-size: 1.125rem;
+    line-height: 1.65rem;
+}
+
+.branch-manager p:last-child {
+    margin-bottom: 0;
+}
+
+.branch-manager .intro {
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+.branch-manager .limited-width {
+    margin-bottom: 30px;
+    max-width: 80%;
+}
+
+@media (max-width: 1000px) {
+    .branch-manager .limited-width {
+        max-width: 100%;
+    }
+}
+
+.branch-manager .limited-width:last-child {
+    margin-bottom: 0;
+}
+
+.branch-manager .submit,
+.branch-manager .button {
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 0;
+    background-color: #0783BE;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.branch-manager .delete {
+    background-color: #ff3131 !important;
+}
+
+.branch-manager .submit:hover,
+.branch-manager .button:hover,
+.branch-manager .delete:hover {
+    background-color: #282828 !important;
+}
+
+.branch-manager .is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.branch-manager .is-flex .button,
+.branch-manager .is-flex .submit {
+    margin-left: 15px;
+}
+
+@media (max-width: 1450px) {
+    .branch-manager .is-flex {
+        display: block;
+    }
+
+    .branch-manager .is-flex .button,
+    .branch-manager .is-flex .submit {
+        display: block;
+        max-width: 350px;
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .branch-manager .is-flex input {
+        display: block;
+        width: 100%;
+    }
+}
+
+.branch-manager .dolt-status-table .dolt-status-row {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 0;
+    column-gap: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.branch-manager .dolt-status-table .dolt-status-row .column {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.branch-manager .dolt-status-table .dolt-status-row.header-row {
+    font-weight: bold;
+    border-bottom: 2px solid #282828;
+}
+
+.branch-manager .dolt-status-table .dolt-status-row:not(.header-row):nth-child(odd) {
+    background-color: #f6f9fc;
+}
+
+.branch-manager input {
+    padding: 5px 10px;
+}
+
+.branch-manager input,
+.branch-manager textarea {
+    @media (max-width: 1400px) {
+        max-width: 350px;
+    }
+}
+
+.branch-manager .field-with-label {
+    margin-bottom: 15px;
+}
+
+.branch-manager .field-with-label label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    display: block;
+}

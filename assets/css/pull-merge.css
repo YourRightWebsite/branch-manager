@@ -1,0 +1,107 @@
+.branch-manager-pull-merge {
+    margin-left: 0;
+    margin-right: 20px;
+    margin-top: 20px; 
+
+    @media (max-width: 782px) {
+        margin-left: 20px;  
+    }
+}
+
+.branch-manager-pull-merge .flex-branch-selection-screen {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.branch-manager-pull-merge .flex-branch-selection-screen .the-arrow {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.branch-manager-pull-merge .autocommit-checkbox {
+    margin-bottom: 15px;
+}
+
+.branch-manager-pull-merge .conflicts-display .resolve-conflicts-table {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+.branch-manager-pull-merge .conflicts-display .table-constraint-violations .conflict-row {
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 0;
+    column-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.branch-manager-pull-merge .conflicts-display .resolve-conflicts-table .conflict-row.header-row {
+    font-weight: bold;
+    border-bottom: 2px solid #282828;
+    padding-bottom: 5px;
+}
+
+.branch-manager-pull-merge .conflicts-display .resolve-conflicts-table .conflict-row:not(.header-row):nth-child(odd) {
+    background-color: #f6f9fc;
+}
+
+.branch-manager-pull-merge .conflicts-display .resolve-conflicts-table .conflict-row .column {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.branch-manager-pull-merge .conflicts-display .resolve-conflicts-table .conflict-row .column.json {
+    textarea {
+        display: block;
+        width: 100%;
+        min-height: 50px;
+    }
+}
+
+.branch-manager-pull-merge .conflicts-display .table-constraint-violations .conflict-row .column.violation-info p {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.branch-manager-pull-merge .conflicts-display .table-data-conflicts .conflict-row {
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 0;
+    column-gap: 15px;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+}
+
+.branch-manager-pull-merge .conflicts-display .table-data-conflicts .conflict-split .conflict-split-row {
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 0;
+    column-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.branch-manager-pull-merge .conflicts-display .table-data-conflicts .conflict-split .conflict-split-row .column textarea {
+    display: block;
+    width: 100%;
+    min-height: 70px;
+}
+
+.branch-manager-pull-merge .conflicts-display .table-data-conflicts .conflict-header {
+    margin-bottom: 2px;
+}
+
+.branch-manager-pull-merge .conflicts-display .table-data-conflicts .key {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    margin-bottom: 5px;
+}
