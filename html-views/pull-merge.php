@@ -149,7 +149,7 @@
 
                         <div class="conflicts-listing data-conflicts">
                             <h3 class="branch-manager-header">Data Conflicts</h3>
-                            <p>These conflicts occur with the data, where a value may be different in the branch compared to the main.</p>
+                            <p>These conflicts occur with the data, where a value in the current branch may conflict with a value in the incoming branch.</p>
 
                             <div class="resolve-conflicts-table table-data-conflicts">
 
