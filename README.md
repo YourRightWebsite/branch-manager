@@ -2,7 +2,7 @@
 A plugin for managing version control of your WordPress database using [Dolt](https://www.dolthub.com/).
 
 ## Current Plugin Version
-**Version 0.1.0** - Initial Public Beta
+**Version 0.1.1** - Minor bugfix release for initial public beta
 
 ## Background Information
 
@@ -110,6 +110,14 @@ If you cannot resolve a conflict via the Branch Manager conflicts screen, you wi
 ## Getting Support
 
 For support, please open an issue here on GitHub, or contact us via email at: build@yourrightwebsite.com
+
+## Change Log
+
+### 0.1.1
+- Updated method for determining if a data conflict is resolvable to check for a primary key, which is the same method used to update data after resolving a conflict.
+
+### 0.1.0
+- Initial Public Release
 
 ## Known Bugs
 

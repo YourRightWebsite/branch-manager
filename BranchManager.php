@@ -5,7 +5,7 @@ namespace BranchManager;
 /*
 Plugin Name: Branch Manager Version Control
 Description: Version control for WordPress databases using Dolt.
-Version: 0.1.0
+Version: 0.1.1
 Author: Your Right Website
 Author URI: https://www.yourrightwebsite.com
 */
@@ -999,6 +999,8 @@ class BranchManager {
      */
     public static function checkIfConflictsUserResolvable($conflicts) {
 
+        global $wpdb;
+
         // Normalize data since we're using objects in some places and arrays in others
         $conflicts = json_encode($conflicts);
         $conflicts = json_decode($conflicts, true);
@@ -1007,26 +1009,25 @@ class BranchManager {
 
         if(isset($conflicts["dolt_conflicts"])) {
             
-            // Ensure that the conflicted table has something that looks like an ID
-            // If there isn't an ID we won't be able to properly resolve the conflict
+            // Ensure that at least one field in the table is a primary key that can be used in the update query
 
             $low_level = $conflicts["dolt_conflicts"]["low_level"];
 
-            $at_least_one_id = false;
-
             foreach($low_level as $table => $conflicts) {
-                foreach($conflicts as $conflict) {
-                    foreach($conflict as $conflicted_field => $conflicted_value) {
-                        $conflicted_field = strtolower($conflicted_field);
+                
+                $table_structure_result = $wpdb->get_results("SHOW COLUMNS FROM " . $table);
 
-                        if($conflicted_field == "id" || substr($conflicted_field, -3) == "_id" || substr($conflicted_field, 0, 3) == "id_") {
-                            $at_least_one_id = true;
-                        }
+                foreach($table_structure_result as $structure_result) {
+
+                    if($structure_result->Key == "PRI") {
+                        return true;
                     }
+
                 }
+
             }
 
-            return $at_least_one_id;
+            return false;
 
         }
 
