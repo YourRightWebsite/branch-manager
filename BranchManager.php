@@ -5,7 +5,7 @@ namespace BranchManager;
 /*
 Plugin Name: Branch Manager Version Control
 Description: Version control for WordPress databases using Dolt.
-Version: 0.1.1
+Version: 0.1.2
 Author: Your Right Website
 Author URI: https://www.yourrightwebsite.com
 */
@@ -1223,7 +1223,7 @@ class BranchManager {
 
                                 // These are the fields that are different for every table
 
-                                $query = $query . "" . $violation_field . "='". $violation_value ."'";
+                                $query = $query . "" . $violation_field . "='". esc_sql($violation_value) ."'";
 
                                 if($violation_loop_counter < ($violation_length -2 )) {
                                     $query = $query . " AND ";

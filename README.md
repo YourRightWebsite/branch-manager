@@ -2,7 +2,7 @@
 A plugin for managing version control of your WordPress database using [Dolt](https://www.dolthub.com/).
 
 ## Current Plugin Version
-**Version 0.1.1** - Minor bugfix release for initial public beta
+**Version 0.1.2** - Fix a bug in conflict resolution when trying to delete a serialized option value.
 
 ## Background Information
 
@@ -113,6 +113,9 @@ For support, please open an issue here on GitHub, or contact us via email at: bu
 
 ## Change Log
 
+### 0.1.2
+- Fixed a bug in the SQL query that deletes unique index queries in situations where the value being deleted is serialized data.
+
 ### 0.1.1
 - Updated method for determining if a data conflict is resolvable to check for a primary key, which is the same method used to update data after resolving a conflict.
 
@@ -124,6 +127,7 @@ For support, please open an issue here on GitHub, or contact us via email at: bu
 The following bugs are currently known to us:
 
 - Plugin activations fail if on any branch other than the *main* branch.  It is thought this occurs because WordPress does a redirect that causes the database to switch back to the *main* branch momentairly.  As a workaround, for now all plugins should be installed and activated on the *main* branch only.
+- Users may have to re-authenticate with WordPress several times when switching branches if attempting to switch branches after a new login but before a commit has been completed on the *main* branch.
 
 ## Plugin License
 
